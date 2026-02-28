@@ -1,0 +1,17 @@
+[project]
+name = "meridian"
+version = "0.1.0"
+description = "Architecture-first control plane for production-grade RAG and agentic AI systems."
+authors = [
+    { name="VPL Solutions LLC" }
+]
+requires-python = ">=3.12"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
