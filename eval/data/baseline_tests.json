@@ -1,0 +1,12 @@
+[
+  {
+    "id": "t1",
+    "query": "What is the rollback procedure for a failed deployment?",
+    "expected_doc_id": "runbook-rollback"
+  },
+  {
+    "id": "t2",
+    "query": "How do I validate a production deployment is healthy?",
+    "expected_doc_id": "runbook-health-check"
+  }
+]
