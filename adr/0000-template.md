@@ -1,28 +1,14 @@
-\# ADR-XXXX: Title
+# ADR-XXXX: Title
 
-
-
-\## Status
-
+## Status
 Proposed | Accepted | Superseded
 
+## Context
 
+## Decision
 
-\## Context
+## Alternatives Considered
 
-
-
-\## Decision
-
-
-
-\## Alternatives Considered
-
-
-
-\## Consequences
-
+## Consequences
 Positive:
-
 Negative:
-

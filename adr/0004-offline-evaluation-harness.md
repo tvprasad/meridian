@@ -1,44 +1,22 @@
-\# ADR-0004: Offline Evaluation Harness as a Core Layer
+# ADR-0004: Offline Evaluation Harness as a Core Layer
 
-
-
-\## Status
-
+## Status
 Accepted
 
-
-
-\## Context
-
+## Context
 Production AI systems degrade without regression discipline and measurable baselines.
 
-
-
-\## Decision
-
+## Decision
 Meridian includes an offline evaluation harness using a JSON baseline dataset. The evaluator runs all test cases, reports aggregate results, and is suitable for CI gating.
 
+## Alternatives Considered
+- Manual testing only
+- API-exposed evaluation endpoint in v0
 
-
-\## Alternatives Considered
-
-\- Manual testing only
-
-\- API-exposed evaluation endpoint in v0
-
-
-
-\## Consequences
-
+## Consequences
 Positive:
-
-\- Regression detection and repeatability
-
-\- Enables disciplined iteration
-
-
+- Regression detection and repeatability
+- Enables disciplined iteration
 
 Negative:
-
-\- Additional maintenance for baseline datasets
-
+- Additional maintenance for baseline datasets
