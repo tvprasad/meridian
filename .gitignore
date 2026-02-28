@@ -17,3 +17,11 @@ Thumbs.db
 runtime.txt
 .python-version
 test_torch.py
+
+chroma_data/
+__pycache__/
+.venv/
+chroma_db/13da9f48-d923-4cd6-8508-7966b206f94a/data_level0.bin
+chroma_db/13da9f48-d923-4cd6-8508-7966b206f94a/header.bin
+chroma_db/13da9f48-d923-4cd6-8508-7966b206f94a/length.bin
+chroma_db/13da9f48-d923-4cd6-8508-7966b206f94a/link_lists.bin
