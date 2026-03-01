@@ -1,7 +1,7 @@
 import json
 import logging
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 logger = logging.getLogger("meridian")
 logger.setLevel(logging.INFO)
@@ -16,5 +16,5 @@ if not logger.handlers:
     logger.addHandler(handler)
 
 def log_event(event: dict):
-    event["timestamp"] = datetime.utcnow().isoformat()
+    event["timestamp"] = datetime.now(timezone.utc).isoformat()
     logger.info(json.dumps(event))

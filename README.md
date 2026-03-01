@@ -24,6 +24,23 @@ Observability precedes scale.
 Governance precedes automation.
 
 ---
+##Azure Integration Strategy
+
+Meridian is designed to be cloud-agnostic.
+
+While v0 uses local embeddings (Chroma) and Ollama for development, the architecture supports:
+
+- Azure OpenAI (Chat Completions / Assistants)
+- Azure Cognitive Search (vector + hybrid retrieval)
+- Managed Identity for authentication
+- Key Vault for secret management
+- Azure Monitor integration for telemetry
+
+Provider and retrieval adapters are abstracted to allow seamless migration to Azure-native services without modifying the control plane.
+
+The governance logic (threshold gating, refusal semantics, telemetry logging) remains invariant across providers.
+
+---
 
 ## v0 Scope
 

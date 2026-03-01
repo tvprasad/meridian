@@ -1,13 +1,24 @@
 import requests
 from core.config import settings
+from providers.base import LLMProvider
 
-def generate_response(prompt: str):
-    response = requests.post(
-        settings.OLLAMA_URL,
-        json={
-            "model": settings.MODEL_NAME,
-            "prompt": prompt,
-            "stream": False
-        }
-    )
-    return response.json()["response"]
+class OllamaProvider(LLMProvider):
+    """
+    Local inference provider using Ollama.
+    Suitable for development environments.
+    """
+
+    def __init__(self, model: str, endpoint: str):
+        self.model = model
+        self.endpoint = endpoint
+
+    def generate(self, prompt: str) -> str:
+        response = requests.post(
+            self.endpoint,
+            json={
+                "model": self.model,
+                "prompt": prompt,
+                "stream": False
+            }
+        )
+        return response.json()["response"]
